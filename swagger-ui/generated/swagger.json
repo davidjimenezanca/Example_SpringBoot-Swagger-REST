@@ -1,0 +1,19 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "This is the API for CNN news",
+    "version" : "1.0.0",
+    "title" : "Swagger CNN news channels services API",
+    "contact" : {
+      "name" : "David Jimenez Anca",
+      "url" : "https://github.com/davidjimenezanca",
+      "email" : "dvdancca@gmail.com"
+    },
+    "license" : {
+      "name" : "Apache 2.0",
+      "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host" : "http://localhost:8080",
+  "basePath" : "/rest-cnn-news"
+}
