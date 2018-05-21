@@ -29,7 +29,8 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 @RestController
-@Api(value="rest-CNN-news", description="RESTful APIs for CNN news data.")
+@Api(value="rest-cnn-news", description="RESTful web services for searching in CNN channels news.")
+@RequestMapping("/search")
 public class SearchController {
 
     @Autowired

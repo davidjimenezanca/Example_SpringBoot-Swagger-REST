@@ -15,5 +15,31 @@
     }
   },
   "host" : "http://localhost:8080",
-  "basePath" : "/rest-cnn-news"
+  "basePath" : "/rest-cnn-news",
+  "tags" : [ {
+    "name" : "rest-cnn-news",
+    "description" : "RESTful web services for searching in CNN channels news."
+  } ],
+  "paths" : {
+    "/search/searchByChannel" : {
+      "get" : {
+        "tags" : [ "rest-cnn-news" ],
+        "summary" : "searchByChannel",
+        "description" : "Search news in Redis database - Using Method GET; format result response for CHANNEL parameter",
+        "operationId" : "searchByChannel",
+        "parameters" : [ {
+          "name" : "channel",
+          "in" : "query",
+          "description" : "Channel key for News DB",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "List of CNN news names found in this channel"
+          }
+        }
+      }
+    }
+  }
 }

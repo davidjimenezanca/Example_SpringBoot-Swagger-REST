@@ -31,6 +31,8 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import javax.servlet.ServletContext;
+
 import static com.google.common.collect.Lists.newArrayList;
 
 @Configuration
@@ -38,11 +40,11 @@ import static com.google.common.collect.Lists.newArrayList;
 public class SwaggerConfig extends WebMvcConfigurerAdapter {
 
     @Bean
-    public Docket api() {
+    public Docket api(ServletContext servletContext) {
 
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("springBoot/controller"))
+                .apis(RequestHandlerSelectors.basePackage("springBoot.controller"))
                 .build()
                 .apiInfo(apiInfo())
                 .useDefaultResponseMessages(false)
