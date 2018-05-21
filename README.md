@@ -37,11 +37,11 @@ Redis is an open source (BSD licensed), in-memory data structure store, used as 
 
 Redis has built-in replication, Lua scripting, LRU eviction, transactions and different levels of on-disk persistence, and provides high availability via Redis Sentinel and automatic partitioning with Redis Cluster.
 
-## Server
+### Server
 
 In this example we use Redis as a sever database in standalone mode.
 
-## Java Redis Client / Lettuce.io
+### Java Redis Client / Lettuce.io
 
 Lettuce is a fully non-blocking Redis client built with netty providing Reactive, Asynchronous and Synchronous Data Access. 
 
