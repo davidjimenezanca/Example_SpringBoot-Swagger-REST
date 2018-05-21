@@ -2,7 +2,7 @@
 
 Example project of Swagger UI tools with Spring Data for Redis database.
 
-REST services are builded with Spring Boot framework.
+REST services are built with Spring Boot framework.
 
 # REST
 
@@ -18,13 +18,13 @@ Swagger is the world’s largest framework of API developer tools for the OpenAP
 
 The Swagger framework is supported by a set of core tools for designing, building, and documenting RESTful APIs. All of these tools are free and open source projects available on GitHub.
 
-## Swagger-UI
+### Swagger-UI
 
 Swagger UI allows anyone — be it your development team or your end consumers — to visualize and interact with the API’s resources without having any of the implementation logic in place. It’s automatically generated from your Swagger specification, with the visual documentation making it easy for back end implementation and client side consumption.
 
 In this repository you can find how Spring Boot Rest automatically generates Swagger-UI tool once project is running.
 
-## Maven Swagger plugin
+### Maven Swagger plugin
 
 This plugin enables your Swagger-annotated project to generate Swagger specs and customizable, templated static documents during the maven build phase. Unlike swagger-core, swagger-maven-plugin does not actively serve the spec with the rest of the application; it generates the spec as a build artifact to be used in downstream Swagger tooling.
 
@@ -68,19 +68,19 @@ NOTE ABOUT DATA MODEL: As data model is replicated from following Redis GitHub p
 
 - [Spring Data for Redis](https://github.com/davidjimenezanca/Example_Spring-Data-Redis)
 
-To work with this example you will need run previous project in order to store data Sets to Redis server.
+To work with this example you will need to run the previous project in order to store data sets at Redis server.
 
 ## Starting the application
 
 As first step you will need to install and start a Redis DB.
 
-Second you will need to store the Sets keys in Redis with model mentioned in previous section.
+Second you will need to store the Sets keys in Redis with the model mentioned in previous section.
 
-For each Set key, the value is in XML-string format.
+For each Set key, the value is stored in XML-string format.
 
-In this project client's configuration is done for a running local Redis server.
+In this project client's DB configuration is done for a running local Redis server.
 
-After database requirements are done you can start this application using maven Spring Boot plugin: just typing:
+After local database requirements are done you can start this application using maven Spring Boot plugin: just typing:
 
  mvn spring-boot:run
 
