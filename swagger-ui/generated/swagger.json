@@ -21,7 +21,40 @@
     "description" : "RESTful web services for searching in CNN channels news."
   } ],
   "paths" : {
-    "/search/searchByChannel" : {
+    "/rest-cnn-news/search/getAll" : {
+      "get" : {
+        "tags" : [ "rest-cnn-news" ],
+        "summary" : "getAll",
+        "description" : "Search news in Redis database - Using Method GET; format result response for CHANNEL parameter",
+        "operationId" : "getAll",
+        "responses" : {
+          "200" : {
+            "description" : "List of CNN news names found in all channel"
+          }
+        }
+      }
+    },
+    "/rest-cnn-news/search/linkContains" : {
+      "get" : {
+        "tags" : [ "rest-cnn-news" ],
+        "summary" : "linkContains",
+        "description" : "Search news in Redis database - Using Method GET; format result response for LINK parameter",
+        "operationId" : "linkContains",
+        "parameters" : [ {
+          "name" : "link",
+          "in" : "query",
+          "description" : "Link key for News DB",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "List of CNN news names found that contain this link token"
+          }
+        }
+      }
+    },
+    "/rest-cnn-news/search/searchByChannel" : {
       "get" : {
         "tags" : [ "rest-cnn-news" ],
         "summary" : "searchByChannel",
@@ -37,6 +70,26 @@
         "responses" : {
           "200" : {
             "description" : "List of CNN news names found in this channel"
+          }
+        }
+      }
+    },
+    "/rest-cnn-news/search/titleContains" : {
+      "get" : {
+        "tags" : [ "rest-cnn-news" ],
+        "summary" : "titleContains",
+        "description" : "Search news in Redis database - Using Method GET; format result response for TITLE parameter",
+        "operationId" : "titleContains",
+        "parameters" : [ {
+          "name" : "title",
+          "in" : "query",
+          "description" : "Title key for News DB",
+          "required" : true,
+          "type" : "string"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "List of CNN news names found that contain this title token"
           }
         }
       }

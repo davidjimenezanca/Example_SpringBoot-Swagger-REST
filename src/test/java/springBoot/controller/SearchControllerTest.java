@@ -35,9 +35,30 @@ public class SearchControllerTest extends BaseTestCase {
     }
 
     @Test
-    public void testSearchListResult() {
+    public void testSearchListResultLatest() {
 
         Set<News> noNews = repository.findByChannel("CNN_latest");
+        assertFalse(noNews.size() == 0 );
+    }
+
+    @Test
+    public void testSearchListResultSports() {
+
+        Set<News> noNews = repository.findByChannel("CNN_sports");
+        assertFalse(noNews.size() == 0 );
+    }
+
+    @Test
+    public void testSearchListResultEurope() {
+
+        Set<News> noNews = repository.findByChannel("CNN_europe");
+        assertFalse(noNews.size() == 0 );
+    }
+
+    @Test
+    public void testSearchListResultMoney() {
+
+        Set<News> noNews = repository.findByChannel("CNN_money");
         assertFalse(noNews.size() == 0 );
     }
 

@@ -16,12 +16,13 @@
  */
 package springBoot.repo;
 
-import org.springframework.stereotype.Repository;
 import springBoot.model.News;
 
 import java.util.Set;
 
 public interface CNNNewsRepository {
+
+    Set<News> findAll();
 
     Set<News> findByChannel(String channel);
 

@@ -25,16 +25,27 @@ import org.springframework.web.bind.annotation.RestController;
 import springBoot.model.News;
 import springBoot.repo.CNNNewsRepository;
 
-import java.util.LinkedHashSet;
 import java.util.Set;
 
 @RestController
 @Api(value="rest-cnn-news", description="RESTful web services for searching in CNN channels news.")
-@RequestMapping("/search")
+@RequestMapping("/rest-cnn-news/search")
 public class SearchController {
 
     @Autowired
     private CNNNewsRepository repository;
+
+    @RequestMapping(value="/getAll", method = RequestMethod.GET)
+    @ApiOperation(value = "getAll",
+            notes = "Search news in Redis database - Using Method GET; format result response for CHANNEL parameter",
+            nickname = "getAll")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "List of CNN news names found in all channel", response = Set.class )
+    })
+    public Set<News> getAll() {
+
+        return repository.findAll();
+    }
 
     @RequestMapping(value="/searchByChannel", method = RequestMethod.GET)
     @ApiOperation(value = "searchByChannel",
@@ -46,9 +57,33 @@ public class SearchController {
     public Set<News> searchByChannel(@ApiParam(value = "Channel key for News DB", name="channel", required = true)
                                         @RequestParam(name="channel", required = true)  String channel) {
 
-        Set<News> response = new LinkedHashSet<>();
-        response.addAll(repository.findByChannel(channel));
-        return response;
+        return repository.findByChannel(channel);
+    }
+
+    @RequestMapping(value="/titleContains", method = RequestMethod.GET)
+    @ApiOperation(value = "titleContains",
+            notes = "Search news in Redis database - Using Method GET; format result response for TITLE parameter",
+            nickname = "titleContains")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "List of CNN news names found that contain this title token", response = Set.class )
+    })
+    public Set<News> titleContains(@ApiParam(value = "Title key for News DB", name="title", required = true)
+                                     @RequestParam(name="title", required = true)  String title) {
+
+        return repository.findByTitle(title);
+    }
+
+    @RequestMapping(value="/linkContains", method = RequestMethod.GET)
+    @ApiOperation(value = "linkContains",
+            notes = "Search news in Redis database - Using Method GET; format result response for LINK parameter",
+            nickname = "linkContains")
+    @ApiResponses(value = {
+            @ApiResponse(code = 200, message = "List of CNN news names found that contain this link token", response = Set.class )
+    })
+    public Set<News> linkContains(@ApiParam(value = "Link key for News DB", name="link", required = true)
+                                     @RequestParam(name="link", required = true)  String link) {
+
+        return repository.findByLink(link);
     }
 
 }

@@ -86,9 +86,9 @@ public class RedisConfig {
         }
 
         public Object deserialize(byte[] bytes) throws SerializationException {
+
             try {
                 JAXBContext jaxbContext = JAXBContext.newInstance(News.class);
-
                 Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
                 return (News) jaxbUnmarshaller.unmarshal(new StreamSource(new ByteArrayInputStream(bytes)));
             } catch (Exception var3) {
@@ -97,9 +97,9 @@ public class RedisConfig {
         }
 
         public byte[] serialize(Object t) throws SerializationException {
+
             ByteArrayOutputStream stream = new ByteArrayOutputStream();
             StreamResult result = new StreamResult(stream);
-
             try {
                 this.marshaller.marshal(t, result);
             } catch (Exception var5) {
