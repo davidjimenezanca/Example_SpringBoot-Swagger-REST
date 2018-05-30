@@ -100,9 +100,9 @@ Rest endpoints are also available at each resource URI.
 
 # Author
 
-David Jiménez Anca : https://twitter.com/davidjimenezanc
-mailto: dvdancca@gmail.com
-Upwork profile: https://www.upwork.com/fl/davidjimenez3
+- David Jiménez Anca : https://twitter.com/davidjimenezanc
+- mailto: dvdancca@gmail.com
+- Upwork profile: https://www.upwork.com/fl/davidjimenez3
 
 
 ### swagger.json
