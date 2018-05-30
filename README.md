@@ -101,107 +101,11 @@ Rest endpoints are also available at each resource URI.
 # Author
 
 David Jiménez Anca : https://twitter.com/davidjimenezanc
+mailto: dvdancca@gmail.com
+Upwork profile: https://www.upwork.com/fl/davidjimenez3
 
 
 ### swagger.json
 
-{
-  "swagger" : "2.0",
-  "info" : {
-    "description" : "This is the API for CNN news",
-    "version" : "1.0.0",
-    "title" : "Swagger CNN news channels services API",
-    "contact" : {
-      "name" : "David Jimenez Anca",
-      "url" : "https://github.com/davidjimenezanca",
-      "email" : "dvdancca@gmail.com"
-    },
-    "license" : {
-      "name" : "Apache 2.0",
-      "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
-    }
-  },
-  "host" : "http://localhost:8080",
-  "basePath" : "/rest-cnn-news",
-  "tags" : [ {
-    "name" : "rest-cnn-news",
-    "description" : "RESTful web services for searching in CNN channels news."
-  } ],
-  "paths" : {
-    "/rest-cnn-news/search/getAll" : {
-      "get" : {
-        "tags" : [ "rest-cnn-news" ],
-        "summary" : "getAll",
-        "description" : "Search news in Redis database - Using Method GET; format result response for CHANNEL parameter",
-        "operationId" : "getAll",
-        "responses" : {
-          "200" : {
-            "description" : "List of CNN news names found in all channel"
-          }
-        }
-      }
-    },
-    "/rest-cnn-news/search/linkContains" : {
-      "get" : {
-        "tags" : [ "rest-cnn-news" ],
-        "summary" : "linkContains",
-        "description" : "Search news in Redis database - Using Method GET; format result response for LINK parameter",
-        "operationId" : "linkContains",
-        "parameters" : [ {
-          "name" : "link",
-          "in" : "query",
-          "description" : "Link key for News DB",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "List of CNN news names found that contain this link token"
-          }
-        }
-      }
-    },
-    "/rest-cnn-news/search/searchByChannel" : {
-      "get" : {
-        "tags" : [ "rest-cnn-news" ],
-        "summary" : "searchByChannel",
-        "description" : "Search news in Redis database - Using Method GET; format result response for CHANNEL parameter",
-        "operationId" : "searchByChannel",
-        "parameters" : [ {
-          "name" : "channel",
-          "in" : "query",
-          "description" : "Channel key for News DB",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "List of CNN news names found in this channel"
-          }
-        }
-      }
-    },
-    "/rest-cnn-news/search/titleContains" : {
-      "get" : {
-        "tags" : [ "rest-cnn-news" ],
-        "summary" : "titleContains",
-        "description" : "Search news in Redis database - Using Method GET; format result response for TITLE parameter",
-        "operationId" : "titleContains",
-        "parameters" : [ {
-          "name" : "title",
-          "in" : "query",
-          "description" : "Title key for News DB",
-          "required" : true,
-          "type" : "string"
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "List of CNN news names found that contain this title token"
-          }
-        }
-      }
-    }
-  }
-}
-
+A link to this file is also available at Gist: https://gist.github.com/davidjimenezanca/396cbff61bc0f9eb94a3227f46d93554
 
