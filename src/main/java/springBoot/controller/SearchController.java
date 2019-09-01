@@ -28,7 +28,10 @@ import springBoot.repo.CNNNewsRepository;
 import java.util.Set;
 
 @RestController
-@Api(value="rest-cnn-news", description="RESTful web services for searching in CNN channels news.")
+@Api(tags = {"Swagger Resource"})
+@SwaggerDefinition(tags = {
+        @Tag(name = "Swagger Resource", description = "RESTful web services for searching in CNN channels news.")
+})
 @RequestMapping("/rest-cnn-news/search")
 public class SearchController {
 

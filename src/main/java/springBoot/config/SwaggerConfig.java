@@ -59,7 +59,7 @@ public class SwaggerConfig extends WebMvcConfigurerAdapter {
         return new ApiInfoBuilder()
                 .title("CNN News Channels API")
                 .description("API to interact with a REDIS DB. This API is a RESTful web services one for searching in CNN channels news database.")
-                .version("1.0.0")
+                .version("2.0.0")
                 .license("Apache 2.0")
                 .licenseUrl("http://www.apache.org/licenses/LICENSE-2.0.html")
                 .build();

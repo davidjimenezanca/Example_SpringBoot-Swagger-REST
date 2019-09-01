@@ -45,9 +45,9 @@ In this example we use Redis as a sever database in standalone mode.
 
 Lettuce is a fully non-blocking Redis client built with netty providing Reactive, Asynchronous and Synchronous Data Access. 
 
-This example is building with Lettuce 3: a scalable thread-safe Java RedisClient providing both synchronous and asynchronous connections for server.
+This example is building with Lettuce 5: a scalable thread-safe Java RedisClient providing both synchronous and asynchronous connections for server.
 
-- [Lettuce client 3](https://lettuce.io/lettuce-3/release/api/)
+- [Lettuce client 5](https://lettuce.io/core/release/api/)
 
 ### Redis connection pool
 

@@ -19,7 +19,7 @@
 
     <groupId>org.springframework.boot.swagger.example</groupId>
     <artifactId>springBoot</artifactId>
-    <version>1.0.2</version>
+    <version>2.0.0</version>
 
     <name>Spring Boot :: Swagger API :: Redis Data</name>
     <description>Example project of Spring Boot app with Swagger API. RESTful web services from Redis database.</description>
@@ -27,7 +27,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.3.RELEASE</version>
+        <version>2.1.7.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -82,7 +82,12 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-redis</artifactId>
-            <version>1.7.6.RELEASE</version>
+            <version>2.1.10.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>io.lettuce</groupId>
+            <artifactId>lettuce-core</artifactId>
+            <version>5.1.8.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>io.springfox</groupId>
@@ -98,12 +103,6 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.5</version>
-        </dependency>
-        <!-- Lettuce Redis client -->
-        <dependency>
-            <groupId>biz.paluch.redis</groupId>
-            <artifactId>lettuce</artifactId>
-            <version>3.5.0.Final</version>
         </dependency>
 
         <dependency>
@@ -165,7 +164,7 @@
                             <basePath>/rest-cnn-news</basePath>
                             <info>
                                 <title>Swagger CNN news channels services API</title>
-                                <version>1.0.0</version>
+                                <version>2.0.0</version>
                                 <description>This is the API for CNN news</description>
                                 <termsOfService>
                                 </termsOfService>

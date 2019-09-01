@@ -2,7 +2,7 @@
   "swagger" : "2.0",
   "info" : {
     "description" : "This is the API for CNN news",
-    "version" : "1.0.0",
+    "version" : "2.0.0",
     "title" : "Swagger CNN news channels services API",
     "contact" : {
       "name" : "David Jimenez Anca",
@@ -17,13 +17,12 @@
   "host" : "http://localhost:8080",
   "basePath" : "/rest-cnn-news",
   "tags" : [ {
-    "name" : "rest-cnn-news",
-    "description" : "RESTful web services for searching in CNN channels news."
+    "name" : "Swagger Resource"
   } ],
   "paths" : {
     "/rest-cnn-news/search/getAll" : {
       "get" : {
-        "tags" : [ "rest-cnn-news" ],
+        "tags" : [ "Swagger Resource" ],
         "summary" : "getAll",
         "description" : "Search news in Redis database - Using Method GET; format result response for CHANNEL parameter",
         "operationId" : "getAll",
@@ -36,7 +35,7 @@
     },
     "/rest-cnn-news/search/linkContains" : {
       "get" : {
-        "tags" : [ "rest-cnn-news" ],
+        "tags" : [ "Swagger Resource" ],
         "summary" : "linkContains",
         "description" : "Search news in Redis database - Using Method GET; format result response for LINK parameter",
         "operationId" : "linkContains",
@@ -56,7 +55,7 @@
     },
     "/rest-cnn-news/search/searchByChannel" : {
       "get" : {
-        "tags" : [ "rest-cnn-news" ],
+        "tags" : [ "Swagger Resource" ],
         "summary" : "searchByChannel",
         "description" : "Search news in Redis database - Using Method GET; format result response for CHANNEL parameter",
         "operationId" : "searchByChannel",
@@ -76,7 +75,7 @@
     },
     "/rest-cnn-news/search/titleContains" : {
       "get" : {
-        "tags" : [ "rest-cnn-news" ],
+        "tags" : [ "Swagger Resource" ],
         "summary" : "titleContains",
         "description" : "Search news in Redis database - Using Method GET; format result response for TITLE parameter",
         "operationId" : "titleContains",

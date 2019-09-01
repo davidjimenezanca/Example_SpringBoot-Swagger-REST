@@ -39,10 +39,8 @@ import java.io.ByteArrayOutputStream;
 public class RedisConfig {
 
     @Bean
-    LettuceConnectionFactory lettuceConnectionFactory() {
-        LettuceConnectionFactory connectionFactory = new LettuceConnectionFactory();
-        connectionFactory.setHostName("127.0.0.1");
-        connectionFactory.setPort(6379);
+    public LettuceConnectionFactory lettuceConnectionFactory() {
+
         return new LettuceConnectionFactory();
     }
 
@@ -50,7 +48,7 @@ public class RedisConfig {
     public RedisTemplate<String, News> redisTemplate(RedisConnectionFactory factory) {
 
         RedisTemplate<String, News> template = new RedisTemplate<String, News>();
-        template.setConnectionFactory(factory);
+        template.setConnectionFactory(lettuceConnectionFactory());
         template.setKeySerializer(new StringRedisSerializer());
         template.setValueSerializer(new XMlRedisSerializer());
         return template;
