@@ -36,7 +36,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <swagger.version>2.8.0</swagger.version>
+        <swagger.version>2.10.0</swagger.version>
         <swagger.maven.plugin.version>3.1.1</swagger.maven.plugin.version>
         <java.version>1.8</java.version>
     </properties>
